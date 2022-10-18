@@ -1,33 +1,33 @@
 # 一，搭建迷你服务器
 
-1，创建一个文件夹为mini_server
+## 1，创建一个文件夹为mini_server
 
-2,  win+r打开cmd命令，
+## 2,  win+r打开cmd命令，
 
 ```powershell
 cd mini_server路径
 ```
 
-3，加载npm
+## 3，加载npm
 
 ```powershell
 npm init
 package name mini_server
 ```
 
-4，安装express
+## 4，安装express
 
 ```powershell
 npm i express
 ```
 
-5，安装路由的history
+## 5，安装路由的history
 
 ```powershell
 npm i connect-history-api-fallback
 ```
 
-6，在mini_server文件下创建一个server.js文件完成以下配置
+## 6，在mini_server文件下创建一个server.js文件完成以下配置
 
 server.js
 
@@ -56,18 +56,18 @@ app.listen(80,(err)=>{
 })
 ```
 
-7，在vs-code工具里输入以下命令
+##7，在vs-code工具里输入以下命令
 
 ![捕获](E:\Desktop\Vue\VueWorkSpace\19\node server.PNG)
 
 # 二，部署项目到服务器
 
-1，将要部署的项目打包成dist文件将里面的static和index.html文件拷贝到mini_serserver 的static文件下
+## 1，将要部署的项目打包成dist文件将里面的static和index.html文件拷贝到mini_serserver 的static文件下
 
-2，打开服务器
+## 2，打开服务器
 
-3，启动服务器
+## 3，启动服务器
 
 ![node server](E:\Desktop\Vue\VueWorkSpace\19\node server.PNG)
 
-4，通过公网ip访问
+## 4，通过公网ip访问
