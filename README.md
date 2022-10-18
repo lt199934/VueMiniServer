@@ -1,37 +1,73 @@
-# vue_mini_server
+# 一，搭建迷你服务器
 
-#### 介绍
-vue迷你部署服务器
+1，创建一个文件夹为mini_server
 
-#### 软件架构
-软件架构说明
+2,  win+r打开cmd命令，
 
+```powershell
+cd mini_server路径
+```
 
-#### 安装教程
+3，加载npm
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+```powershell
+npm init
+package name mini_server
+```
 
-#### 使用说明
+4，安装express
 
-1.  xxxx
-2.  xxxx
-3.  xxxx
+```powershell
+npm i express
+```
 
-#### 参与贡献
+5，安装路由的history
 
-1.  Fork 本仓库
-2.  新建 Feat_xxx 分支
-3.  提交代码
-4.  新建 Pull Request
+```powershell
+npm i connect-history-api-fallback
+```
 
+6，在mini_server文件下创建一个server.js文件完成以下配置
 
-#### 特技
+server.js
 
-1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
-2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
-3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
-4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
-5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
-6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
+```js
+// npm init
+// package name mini_server
+// npm i express
+// npm i connect-history-api-fallback
+//微型服务配置
+const express = require('express');
+const history = require('connect-history-api-fallback');
+
+//创建应用
+const app = express();
+
+//修复history把路由当请求接口的异常
+app.use(history());
+//应用指向到文件夹
+app.use(express.static(__dirname+'/static'));
+
+//启动
+app.listen(80,(err)=>{
+    if(!err){
+        console.log("服务器启动成功");
+    }
+})
+```
+
+7，在vs-code工具里输入以下命令
+
+![捕获](E:\Desktop\Vue\VueWorkSpace\19\node server.PNG)
+
+# 二，部署项目到服务器
+
+1，将要部署的项目打包成dist文件将里面的static和index.html文件拷贝到mini_serserver 的static文件下
+
+2，打开服务器
+
+3，启动服务器
+
+![node server](E:\Desktop\Vue\VueWorkSpace\19\node server.PNG)
+
+4，通过公网ip访问
