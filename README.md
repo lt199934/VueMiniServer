@@ -67,7 +67,6 @@ app.listen(80,(err)=>{
 ## 2，打开服务器
 
 ## 3，启动服务器
-
-![node server](E:\Desktop\Vue\VueWorkSpace\19\node server.PNG)
+![node server](images/node%20server.PNG)
 
 ## 4，通过公网ip访问
